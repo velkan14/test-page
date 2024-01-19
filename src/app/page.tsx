@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Button from "./components/Button";
 
 export default function Home() {
   return (
@@ -11,23 +11,71 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="/redirect"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            302 Redirect{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Redirect to duckduckgo.com
-          </p>
-        </a>
-      </div>
+      <section>
+        <h1>Permanent Redirections</h1>
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          {/* <Button
+            url="/permanentsamedomain"
+            title="301 Redirect"
+            description="Moved Permanently to different domain: duckduckgo.com"
+          /> */}
+          <Button
+            url="/permanentsamedomain"
+            title="308 Redirect"
+            description="Permanent Redirect to same domain"
+          />
+          <Button
+            url="/permanentdiffdomain"
+            title="308 Redirect"
+            description="Permanent Redirect to different domain: duckduckgo.com"
+          />
+        </div>
+      </section>
+      <section>
+        <h1>Temporary Redirections</h1>
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          <Button
+            url="/tempsamedomain"
+            title="307 Redirect"
+            description="Found - same domain"
+          />
+          <Button
+            url="/tempdiffdomain"
+            title="307 Redirect"
+            description="Found - different domain: duckduckgo.com"
+          />
+          {/* <Button
+            url="/redirect"
+            title="303 Redirect"
+            description="See Other - different domain: duckduckgo.com"
+          />
+          <Button
+            url="/redirect"
+            title="307 Redirect"
+            description="Permanent redirect to different domain: duckduckgo.com"
+          /> */}
+        </div>
+      </section>
+      {/* <section>
+        <h1>Other Redirections</h1>
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          <Button
+            url="/redirect"
+            title="Loop"
+            description="Found - different domain: duckduckgo.com"
+          />
+          <Button
+            url="/redirect"
+            title="Multiple"
+            description="See Other - different domain: duckduckgo.com"
+          />
+          <Button
+            url="/redirect"
+            title="Multiple"
+            description="Permanent redirect to different domain: duckduckgo.com"
+          />
+        </div>
+      </section> */}
     </main>
   );
 }
