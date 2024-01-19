@@ -20,6 +20,16 @@ export default function Home() {
             description="Moved Permanently to different domain: duckduckgo.com"
           /> */}
           <Button
+            url="/permanentsamedomain301"
+            title="301 Redirect"
+            description="Permanent Redirect to same domain"
+          />
+          <Button
+            url="/permanentdiffdomain301"
+            title="301 Redirect"
+            description="Permanent Redirect to different domain: duckduckgo.com"
+          />
+          <Button
             url="/permanentsamedomain"
             title="308 Redirect"
             description="Permanent Redirect to same domain"
@@ -34,6 +44,16 @@ export default function Home() {
       <section>
         <h1>Temporary Redirections</h1>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          <Button
+            url="/tempsamedomain302"
+            title="302 Redirect"
+            description="Found - same domain"
+          />
+          <Button
+            url="/tempdiffdomain302"
+            title="302 Redirect"
+            description="Found - different domain: duckduckgo.com"
+          />
           <Button
             url="/tempsamedomain"
             title="307 Redirect"
