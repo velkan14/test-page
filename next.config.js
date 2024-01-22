@@ -103,6 +103,22 @@ const nextConfig = {
         permanent: false,
         statusCode: 302,
       },
+      {
+        source: "/re1",
+        destination: `${EXTERNAL_REDIRECT_2}/tempdiffdomain302`,
+        permanent: false,
+        statusCode: 302,
+      },
+      {
+        source: "/loop1",
+        destination: `/loop2`,
+        permanent: false,
+      },
+      {
+        source: "/loop2",
+        destination: `/loop1`,
+        permanent: false,
+      },
     ];
   },
 };
