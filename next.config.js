@@ -119,6 +119,16 @@ const nextConfig = {
         destination: `/loop1`,
         permanent: false,
       },
+      {
+        source: "/nonexistingsame",
+        destination: `/asfhdjidsghnureg`,
+        permanent: false,
+      },
+      {
+        source: "/nonexistingexternal",
+        destination: `https://none.ansjdhnf/`,
+        permanent: false,
+      },
     ];
   },
 };

@@ -106,9 +106,14 @@ export default function Home() {
       <Grid title="Errors">
         <Button url="/loop1" title="Loop" description="Loop" />
         <Button
-          url="/abncasdaskjmdask"
-          title="Redirect to non existing page"
-          description="Loop"
+          url="/nonexistingexternal"
+          title="Non existing domain"
+          description="Redirect to non existing domain"
+        />
+        <Button
+          url="/nonexistingsame"
+          title="Non existing page"
+          description="Redirect to non existing page on same domain"
         />
       </Grid>
     </main>
