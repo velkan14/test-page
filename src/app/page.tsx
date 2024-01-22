@@ -1,5 +1,5 @@
-import Button from "./components/Button";
-import Grid from "./components/Grid";
+import Button from "../components/Button";
+import Grid from "../components/Grid";
 
 export default function Home() {
   const { WEBSITE_NAME = "Redirection Test page" } = process.env;
@@ -105,7 +105,11 @@ export default function Home() {
       </Grid>
       <Grid title="Errors">
         <Button url="/loop1" title="Loop" description="Loop" />
-        <Button url="/error" title="Redirect to error" description="Loop" />
+        <Button
+          url="/abncasdaskjmdask"
+          title="Redirect to non existing page"
+          description="Loop"
+        />
       </Grid>
     </main>
   );
