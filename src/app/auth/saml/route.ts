@@ -1,4 +1,6 @@
-export async function POST(request: { json: () => any; }) {
+import { NextRequest } from "next/server";
+
+export async function POST(request: Request | NextRequest) {
   // Parse the request body
   const body = await request.json(); // Parse JSON from the request body
   const { provider, SAMLResponse, RelayState, } = body;
