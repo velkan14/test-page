@@ -12,5 +12,5 @@ export async function POST(request: Request | NextRequest) {
   params.set('provider', provider?.toString() || 'notset')
   params.set('SAMLResponse', SAMLResponse?.toString() || 'notset')
   
-  return Response.redirect(`/auth/receiver?${params.toString()}`, 303); 
+  return Response.redirect(`https://${RelayState}/auth/receiver?${params.toString()}`, 303); 
 }
