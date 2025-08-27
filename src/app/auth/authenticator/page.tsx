@@ -4,7 +4,7 @@ export default async function Authenticator({ searchParams }:{
 }) {
   const { WEBSITE_NAME = "Redirection Test page" } = process.env;
   const { relay } = await searchParams
-  const actionUrl = new URL(`${relay}/auth/saml`)
+  const actionUrl = new URL('/auth/saml', `https://${relay}`)
 
   return (
     <main className="flex min-h-screen flex-col justify-between p-24">
