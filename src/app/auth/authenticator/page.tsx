@@ -15,8 +15,8 @@ export default async function Authenticator({ searchParams }:{
       </div>
 
       <form action={actionUrl.toString()} id="RequestForm" method="post">
-        <input name="provider" type="text" value={WEBSITE_NAME} />
-        <input type="hidden" name="SAMLResponse" value="Base64EncodedSAMLResponse" />
+        <input name="provider" type="hidden" value={WEBSITE_NAME} />
+        <input type="text" name="SAMLResponse" />
         <input type="hidden" name="RelayState" value={relay} />
         <input id="SubmitButton" type="submit" value="Submit" />
       </form>
