@@ -1,7 +1,7 @@
 import { headers } from 'next/headers';
 
-import Button from "../../../components/Button";
-import Grid from "../../../components/Grid";
+import Button from "../../components/Button";
+import Grid from "../../components/Grid";
 
 export default function Landing() {
 

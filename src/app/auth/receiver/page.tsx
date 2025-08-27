@@ -1,5 +1,7 @@
 
-export default function Authenticator({ searchParams }) {
+export default async function Authenticator({ searchParams }:{
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
   const { WEBSITE_NAME = "Redirection Test page" } = process.env;
   const { provider, saml } = await searchParams
   return (
@@ -11,8 +13,8 @@ export default function Authenticator({ searchParams }) {
       </div>
       
       <div>
-        <p>{provider}<p>
-        <p>{saml}<p>
+        <p>{provider}</p>
+        <p>{saml}</p>
       </div>
     </main>
   );

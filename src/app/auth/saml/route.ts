@@ -1,4 +1,4 @@
-export async function POST(request) {
+export async function POST(request: { json: () => any; }) {
   // Parse the request body
   const body = await request.json(); // Parse JSON from the request body
   const { provider, SAMLResponse, RelayState, } = body;

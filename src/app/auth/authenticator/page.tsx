@@ -1,5 +1,7 @@
 
-export default function Authenticator({ searchParams }) {
+export default async function Authenticator({ searchParams }:{
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
   const { WEBSITE_NAME = "Redirection Test page" } = process.env;
   const { relay } = await searchParams
   return (
@@ -12,8 +14,8 @@ export default function Authenticator({ searchParams }) {
 
       <form action={`${relay}/auth/saml`} id="RequestForm" method="post">
         <input name="provider" type="text" value={WEBSITE_NAME} />
-        <input type="hidden" name="SAMLResponse" value="Base64EncodedSAMLResponse">
-        <input type="hidden" name="RelayState" value={relay}>
+        <input type="hidden" name="SAMLResponse" value="Base64EncodedSAMLResponse" />
+        <input type="hidden" name="RelayState" value={relay} />
         <input id="SubmitButton" type="submit" value="Submit" />
       </form>
     </main>
