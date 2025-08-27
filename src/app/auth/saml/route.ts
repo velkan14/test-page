@@ -2,8 +2,10 @@ import { NextRequest } from "next/server";
 
 export async function POST(request: Request | NextRequest) {
   // Parse the request body
-  const body = await request.json(); // Parse JSON from the request body
-  const { provider, SAMLResponse, RelayState, } = body;
+  const formData = await request.formData();
+  const provider = formData.get('provider'); 
+  const SAMLResponse = formData.get('SAMLResponse');
+  const RelayState = formData.get('RelayState');
 
   // Example processing
   console.log(`Received provider: ${provider}, SAMLResponse: ${SAMLResponse} RelayState: ${RelayState}`);
