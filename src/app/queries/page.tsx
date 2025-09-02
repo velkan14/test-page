@@ -16,7 +16,7 @@ export default async function Queries({ searchParams }:{
 
       {
       Object.entries(params).map(
-        (p)=> (<div>{p[0]} {p[1]}</div>)
+        (p)=> (<div key={p[0]}>{p[0]} {p[1]}</div>)
       )
       }
     </main>
